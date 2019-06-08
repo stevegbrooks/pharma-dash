@@ -27,7 +27,6 @@ def cleanData_CT(searchResults):
     return searchResults
 
 def main():
-
     searchResults = parseXML('SearchResults.xml', 'study')
     searchResults = pd.DataFrame.from_dict(searchResults)
     searchResults = cleanData_CT(searchResults)
@@ -44,5 +43,4 @@ def main():
     byYear.plot(xlim = [2000, 2019])
 
 if __name__ == "__main__":
-    # calling main function
     main()
