@@ -4,6 +4,7 @@
 # 2. bring it into python and try to build a prototype descriptive stats dashboard
 
 import xml.etree.ElementTree as ET
+import matplotlib.pyplot as plt
 import pandas as pd
 
 def parseXML(xmlFile, childName):
@@ -41,6 +42,7 @@ def main():
 
     #graph it
     byYear.plot(xlim = [2000, 2019])
+    plt.show()
 
 if __name__ == "__main__":
     main()
