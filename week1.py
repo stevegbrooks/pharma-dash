@@ -38,8 +38,6 @@ def main():
     #number of studies by year and status
     byYear = pd.crosstab(searchResults['start_year'], searchResults['study_types'])
     print(byYear)
-
-    #graph it
     byYear.plot(xlim = [2000, 2019])
 
 if __name__ == "__main__":
