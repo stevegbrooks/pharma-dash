@@ -1,6 +1,8 @@
 #This module retrieves and cleans data from the clinicaltrials.gov website
 #author - steve
 
+import pandas as pd
+
 def getData(webDriver):
     #TODO implement
     pass
