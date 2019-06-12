@@ -2,10 +2,11 @@
 #author - steve
 
 import xml.etree.ElementTree as et
+import pandas as pd
 
-def parseXML(xmlFile, childName):
+def readXML(xmlFile, childName):
     # Takes in a file path and a string for referencing the elements in the XML.
-    # Returns a list of dictionaries
+    # Returns a pandas DataFrame
     tree = et.parse(xmlFile)
     root = tree.getroot()
     output = []
@@ -14,4 +15,4 @@ def parseXML(xmlFile, childName):
         for header in child:
             childInfo[header.tag] = header.text
         output.append(childInfo)
-    return output
+    return pd.DataFrame.from_dict(output)
